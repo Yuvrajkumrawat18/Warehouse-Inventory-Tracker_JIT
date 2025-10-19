@@ -1,11 +1,11 @@
 package com.yuvraj.warehouse;
-public class product {
+public class Product {
 
     private String productId;
     private String name;
     private int quantity;
     private int reoderThreshold;
-    public product (String productId, String name, int quantity, int reoderThreshold ){
+    public Product (String productId, String name, int quantity, int reoderThreshold ){
         this.productId = productId;
         this.name = name;
         this.quantity = quantity;
