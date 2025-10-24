@@ -70,5 +70,9 @@ public class Warehouse {
             System.out.println( name + "Error loading inventory: " + e.getMessage());
         }
     }
+    public String getName() {
+    return name;
+}
+
   }
 
