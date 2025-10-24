@@ -28,7 +28,7 @@ public class Warehouse {
             return;
         }
         product.setQuantity(product.getQuantity() + quantity);
-        System.out.println( name + "Shipment Received For " + product.getName() + "+" + quantity + "Total:" + product.getQuantity());
+        System.out.println( name + "Shipment Received For " + product.getName() + " (+" + quantity + ") Total:" + product.getQuantity());
     }
     public synchronized void fulfillOrder(String productId, int quantity){
         Product product = products.get(productId);
@@ -42,7 +42,7 @@ public class Warehouse {
          return;
         }
         product.setQuantity(product.getQuantity() - quantity);
-        System.out.println(name + " Oder fulfilled for " + product.getName() + "-" + quantity + "Remaining " + product.getQuantity());
+        System.out.println(name + " Oder fulfilled for " + product.getName() + " (-" + quantity + ") Remaining :" + product.getQuantity());
         if (product.getQuantity() < product.getReoderThreshold()) {
             alertservice.onLowStock(product);
         }
